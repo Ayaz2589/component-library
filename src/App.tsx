@@ -3,9 +3,9 @@ import './App.css'
 function App() {
 
   return (
-    <>
-    Test
-    </>
+    <header className="w-full border-b bg-white">
+      
+    </header>
   )
 }
 
