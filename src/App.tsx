@@ -1,14 +1,13 @@
-import { SiVite, SiNextdotjs } from "react-icons/si";
 import "./App.css";
-import { Section, Container, Layout } from "./components/site";
-import { BlockLinkCard } from "./components/library";
+import { Container, Layout } from "./components/site";
 import {
   PrimaryButtonSection,
   SecondaryButtonSection,
   TertiaryButtonSection,
   DestructiveButtonSection,
   SimpleCardSection,
-  HeaderFooterCardSection
+  HeaderFooterCardSection,
+  BlocklinkCardSection,
 } from "./components/sections";
 
 const ButtonContainer = () => (
@@ -30,17 +29,7 @@ const CardContainer = () => (
   >
     <SimpleCardSection />
     <HeaderFooterCardSection />
-    <Section
-      title="Block link"
-      description="A simple card enhanced into a selectable block link."
-    >
-      <BlockLinkCard url="https://vitejs.dev/" text="Vite">
-        <SiVite className="h-10 w-10" />
-      </BlockLinkCard>
-      <BlockLinkCard url="https://nextjs.org/" text="Next.js">
-        <SiNextdotjs className="h-10 w-10" />
-      </BlockLinkCard>
-    </Section>
+    <BlocklinkCardSection />
   </Container>
 );
 
