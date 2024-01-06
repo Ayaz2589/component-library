@@ -1,6 +1,6 @@
 import "./App.css";
 import { Section, Container, Layout } from "./components/site";
-import { Button } from "./components/library";
+import { Button, CardContent } from "./components/library";
 
 export default function App() {
   return (
@@ -230,6 +230,23 @@ export default function App() {
           >
             Cancel
           </Button>
+        </Section>
+      </Container>
+      <Container
+        title="Card"
+        description="A card is a flexible and extensible content container."
+      >
+        <Section
+          title="Simple"
+          description="Simple cards display content and can provide a distinct link that can be selected."
+        >
+          {/* Simple card */}
+          <CardContent
+            title="Card title"
+            subtitle="Card subtitle"
+            plaintext="Some quick example text to build on the card title and make up the bulk of the card's content."
+            link={{ url: "#", text: "Card link" }}
+          ></CardContent>
         </Section>
       </Container>
     </Layout>
