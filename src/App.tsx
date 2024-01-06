@@ -1,6 +1,7 @@
+import { SiVite, SiNextdotjs } from "react-icons/si";
 import "./App.css";
 import { Section, Container, Layout } from "./components/site";
-import { Button, CardContent } from "./components/library";
+import { Button, CardContent, BlockLinkCard } from "./components/library";
 
 export default function App() {
   return (
@@ -13,11 +14,8 @@ export default function App() {
           title="Primary"
           description="Primary actions should be obvious. Solid, high contrast background colors work great here."
         >
-          {/* Primary button */}
           <Button>Default</Button>
-          {/* Disabled primary button */}
           <Button disabled>Disabled</Button>
-          {/* Primary color override buttons */}
           <Button
             colors={{
               bg: "bg-amber-500",
@@ -68,13 +66,10 @@ export default function App() {
           title="Secondary"
           description="Secondary actions should be clear but not prominent. Outline styles or lower contrast background colors are great options."
         >
-          {/* Secondary button */}
           <Button variant="secondary">Default</Button>
-          {/* Disabled secondary button */}
           <Button variant="secondary" disabled>
             Disabled
           </Button>
-          {/* Secondary color override buttons */}
           <Button
             variant="secondary"
             colors={{
@@ -135,13 +130,10 @@ export default function App() {
           title="Tertiary"
           description="Tertiary actions should be discoverable but unobtrusive. Styling these actions like links is usually the best approach."
         >
-          {/* Tertiary button */}
           <Button variant="tertiary">Default</Button>
-          {/* Disabled tertiary button */}
           <Button variant="tertiary" disabled>
             Disabled
           </Button>
-          {/* Tertiary color override buttons */}
           <Button
             variant="tertiary"
             colors={{
@@ -197,7 +189,6 @@ export default function App() {
           title="Destructive"
           description="Destructive actions typically result in the removal of an item, and may result in an undesirable consequence."
         >
-          {/* Destructive primary button */}
           <Button
             colors={{
               bg: "bg-red-500",
@@ -207,7 +198,6 @@ export default function App() {
           >
             Yes, I'm sure I want to delete this.
           </Button>
-          {/* Destructive secondary button */}
           <Button
             variant="secondary"
             colors={{
@@ -219,7 +209,6 @@ export default function App() {
           >
             Unsubscribe
           </Button>
-          {/* Destructive tertiary button */}
           <Button
             variant="tertiary"
             colors={{
@@ -240,13 +229,43 @@ export default function App() {
           title="Simple"
           description="Simple cards display content and can provide a distinct link that can be selected."
         >
-          {/* Simple card */}
           <CardContent
             title="Card title"
             subtitle="Card subtitle"
             plaintext="Some quick example text to build on the card title and make up the bulk of the card's content."
             link={{ url: "#", text: "Card link" }}
           ></CardContent>
+        </Section>
+
+        <Section
+          title="Simple with a header and footer"
+          description="Add an optional header and/or footer within a card."
+        >
+          <CardContent
+            header="Featured"
+            title="Card title"
+            subtitle="Card subtitle"
+            plaintext="Some quick example text to build on the card title and make up the bulk of the card's content."
+            link={{ url: "#", text: "Card link" }}
+          ></CardContent>
+          <CardContent
+            footer="Last updated 5 mins ago"
+            title="Card title"
+            subtitle="Card subtitle"
+            plaintext="Some quick example text to build on the card title and make up the bulk of the card's content."
+            link={{ url: "#", text: "Card link" }}
+          ></CardContent>
+        </Section>
+        <Section
+          title="Block link"
+          description="A simple card enhanced into a selectable block link."
+        >
+          <BlockLinkCard url="https://vitejs.dev/" text="Vite">
+            <SiVite className="h-10 w-10" />
+          </BlockLinkCard>
+          <BlockLinkCard url="https://nextjs.org/" text="Next.js">
+            <SiNextdotjs className="h-10 w-10" />
+          </BlockLinkCard>
         </Section>
       </Container>
     </Layout>
